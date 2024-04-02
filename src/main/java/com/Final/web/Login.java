@@ -117,6 +117,7 @@ public class Login extends HttpServlet {
 		}else if(request.getServletPath().equals("/login/staff")) {
 			Staff staff = new Staff(request.getParameter("email"),request.getParameter("password"));
 			String email = request.getParameter("email");
+			session.setAttribute("staff_email", email);
 			String password = request.getParameter("password");
 
 			try {
@@ -136,10 +137,11 @@ public class Login extends HttpServlet {
 					 * System.out.println(staffDao.staffLogin(email,password)[0][4]);
 					 * System.out.println(staffDao.staffLogin(email,password)[0][5]);
 					 */
-					System.out.println("one**********");
+//					System.out.println("one**********");
+					session.setAttribute("staff_email", email);
 					System.out.println(staffDao.staffLogin(email,password)[0][6]);
 					request.setAttribute("staff_data", staffDao.staffLogin(email,password));
-					System.out.println("**********");
+//					System.out.println("**********");
 					session.setAttribute("staffEmail",staff.getEmail());
 					if(staffDao.staffLogin(email,password)[0][6].equals("1")) {
 						getServletContext().getRequestDispatcher("/Admin/Home.jsp").forward(request, response);

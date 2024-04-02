@@ -96,6 +96,28 @@
       	border: none; 
       	cursor: pointer;
       }
+      #options {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0;
+            border-bottom: 1px solid #ddd;
+            padding: 20px;
+        }
+
+        #option {
+            margin: 0 10px;
+            padding: 10px 20px;
+            border-radius: 4px;
+            text-decoration: none;
+            color: #fff;
+            background-color: #2ea44f;
+            transition: background-color 0.2s;
+        }
+
+        #option:hover {
+            background-color: #1b7a3a;
+        }
       
         header {
             padding: 1rem 2rem;
@@ -176,15 +198,14 @@
 	  <nav class="navbar">
 	    <!-- LOGO -->
 	    <div class="logo">FINANCE</div>
-	    <!-- NAVIGATION MENU -->
 	    <ul class="nav-links">
-	      <li><a href="/Final/StaffHome">Home</a></li>
-	      <li><a href="/Final/registerStudent">Register Students</a></li>
-		  <li><a href="/Final/feeCollection" >Fee Collection</a></li>
-		   <li><a href="/Final/expenseManagement">Expense Management</a></li>
-		  <li><a href="/Final/payrollProcessing">PayrollProcessing</a></li>
-		  <li><a href="/Final/studentDetails">Student Details</a></li>
-	    </ul>
+       <li><a href="#home">Home</a></li>
+	      
+	      <li><a href="/Final/registerStaff">Register Staff</a></li>
+	      <li><a href="/Final/registerStudents">Register Student</a></li>
+	      <li><a href="/Final/staffDetails">Staff Details</a></li>
+	      <li><a href="/Final/studentDetails">Student Details</a></li>
+    </ul>
 	  </nav>
     <div class="container">
       <h1>Finance Allocation Dashboard</h1>
@@ -232,14 +253,14 @@
         </div>
         <%} %>
       </div>
-      <div style="margin-right: auto;backgroud-green:blue; display: flex; justify-content: space-between; gap: 10px; margin-top:10px;">
-    		<a  href="/Final/expenseManagement">
+      <div style="margin-right: auto;backgroud-green:blue; display: flex; justify-content: end; gap: 10px; margin-top:10px;">
+    		<!-- <a  href="/Final/expenseManagement">
     			<button class="confirmation_button">BACK</button>
-    		</a>
-    		<form action="/Final/Home" method="post">
-    			<input value=<%=session.getAttribute("staff_detail") %> name="email" style="visibility:hidden;"/>
-    			<button class="confirmation_button">DONE</button>
-    		</form>
+    		</a> -->
+    		<div id="options">
+            
+            	<a id="option" href="/Final/adminReport">Generate Report</a>
+        	</div>
     		
     		
   		</div>

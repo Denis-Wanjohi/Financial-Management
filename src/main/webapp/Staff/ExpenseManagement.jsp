@@ -15,6 +15,50 @@
         font-family: Arial, sans-serif;
         background-color: #f2f2f2;
       }
+      
+      a {
+      text-decoration: none;
+    }
+
+    li {
+      list-style: none;
+    }
+
+    /* NAVBAR STYLING STARTS */
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px;
+      background-color: teal;
+      color: #fff;
+    }
+
+    .nav-links a {
+      color: #fff;
+    }
+
+    /* LOGO */
+    .logo {
+      font-size: 32px;
+    }
+
+    /* NAVBAR MENU */
+    .nav-links {
+      display: flex;
+      gap: 1em;
+      font-size: 18px;
+    }
+
+    .nav-links li:hover {
+      background-color: #4c9e9e;
+      border-radius: 5px;
+      transition: 0.3s ease;
+    }
+
+    .nav-links li {
+      padding: 5px 14px;
+    }
       .container {
         width: 100%;
         max-width: 1200px;
@@ -92,6 +136,17 @@
     <title>Finance Allocation Dashboard</title>
   </head>
   <body>
+  	<nav class="navbar">		
+	    <div class="logo">FINANCE</div>
+	  
+	<ul class="nav-links">
+		  <li><a href="/Final/StaffHome">Home</a></li>
+	      <li><a href="/Final/registerStudent">Register Students</a></li>
+		  <li><a href="/Final/feeCollection" >Fee Collection</a></li>
+		  <li><a href="/Final/payrollProcessing">PayrollProcessing</a></li>
+		  <li><a href="/Final/studentDetails">Student Details</a></li>
+	</ul>
+	</nav>
     <div class="container">
     <div style="background-color:white; display: flex; justify-content: space-between; align-items: center; gap: 10px; margin-bottom:10px;">
   		<h1 style="color: black;">Finance Allocation Dashboard</h1>

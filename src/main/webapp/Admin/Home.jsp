@@ -99,10 +99,10 @@
 </div>
 <div id="quickAccess">
     <a href="/Final/staffDetails" class="nav-link">Staff Details</a>
-    <a href="/Final/studentDetails" class="nav-link">Student Details</a>
+    <a href="/Final/studentsDetails" class="nav-link">Student Details</a>
     <a href="/Final/registerStaff" class="nav-link">Register Staff</a>
     <a href="/Final/registerStudent" class="nav-link">Register Student</a>
-    <a href="/Final/budget" class="nav-link">Generate Reports</a>
+    <a href="/Final/proposedBudget" class="nav-link">Generate Reports</a>
     
 </div>
 </body>

@@ -8,7 +8,52 @@
       body {
         font-family: Arial, sans-serif;
         background-color: #f2f2f2;
+        margin:0;
       }
+      
+          a {
+      text-decoration: none;
+    }
+
+    li {
+      list-style: none;
+    }
+
+    /* NAVBAR STYLING STARTS */
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px;
+      background-color: teal;
+      color: #fff;
+    }
+
+    .nav-links a {
+      color: #fff;
+    }
+
+    /* LOGO */
+    .logo {
+      font-size: 32px;
+    }
+
+    /* NAVBAR MENU */
+    .nav-links {
+      display: flex;
+      gap: 1em;
+      font-size: 18px;
+    }
+
+    .nav-links li:hover {
+      background-color: #4c9e9e;
+      border-radius: 5px;
+      transition: 0.3s ease;
+    }
+
+    .nav-links li {
+      padding: 5px 14px;
+    }
       form {
         width: 300px;
         margin: 50px auto;
@@ -55,6 +100,18 @@
     </style>
   </head>
   <body>
+ <nav class="navbar">
+ 
+    <div class="logo">FINANCE</div>
+  
+    <ul class="nav-links">
+       <li><a href="#home">Home</a></li>
+	      <li><a href="/Final/proposedBudget">Reports</a></li>
+	      <li><a href="/Final/registerStudents">Register Student</a></li>
+	      <li><a href="/Final/staffDetails">Staff Details</a></li>
+	      <li><a href="/Final/studentsDetails">Student Details</a></li>
+    </ul>
+  </nav>
     <form>
       <label for="name">Name:</label>
       <input type="text" id="name" name="name" required />

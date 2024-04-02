@@ -19,7 +19,7 @@ import com.Final.Dao.TransactionDao;
 /**
  * Servlet implementation class Staff
  */
-@WebServlet(urlPatterns={"/Home","/registerStudent","/feeCollection","/expenseManagement","/budget","/expense","/payrollProcessing","/payroll","/studentDetails"})
+@WebServlet(urlPatterns={"/Home","/StaffHome","/registerStudent","/feeCollection","/expenseManagement","/budget","/expense","/payrollProcessing","/payroll","/studentDetails"})
 public class Staff extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	Student student = null ;
@@ -41,6 +41,7 @@ public class Staff extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		HttpSession session =  request.getSession();
 	
 		if(request.getServletPath().equals("/registerStudent")) {
 			getServletContext().getRequestDispatcher("/Staff/RegisterStudent.jsp").forward(request, response);
@@ -79,6 +80,17 @@ public class Staff extends HttpServlet {
 			try {
 				request.setAttribute("student_details", studentDao.studentData());
 				System.out.println(studentDao.studentData()[0][0]);
+			} catch (ClassNotFoundException | SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			getServletContext().getRequestDispatcher("/Staff/StudentDetails.jsp").forward(request, response);
+		}else if(request.getServletPath().equals("/StaffHome")) {
+			String staff_email = (String) session.getAttribute("staff_email");
+			
+			try {
+				request.setAttribute("staff_data", staffDao.staffByEmail(staff_email));
+				getServletContext().getRequestDispatcher("/Staff/Home.jsp").forward(request, response);
 			} catch (ClassNotFoundException | SQLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

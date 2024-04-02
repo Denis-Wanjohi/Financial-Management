@@ -66,16 +66,15 @@ public class StaffDao {
 			List<String[]> resultList = new ArrayList<>();
 //			while(rs.next()) {
 				String name = rs.getString("name");
-		
 				String identification_number = rs.getString("identification_number");
-			
 				String staff_number = rs.getString("staff_number");
 				String gender = rs.getString("gender");
 				String email = rs.getString("email");
 				String phone_number = rs.getString("phone_number");
+				String type = rs.getString("is_admin");
 				
 				
-				String[] row = {name,staff_number,identification_number,gender,email,phone_number};
+				String[] row = {name,staff_number,identification_number,gender,email,phone_number,type};
 				resultList.add(row);
 				 String[][] resultArray = resultList.toArray(new String[0][0]);
 			

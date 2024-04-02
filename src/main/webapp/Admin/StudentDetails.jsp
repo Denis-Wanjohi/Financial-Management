@@ -9,7 +9,52 @@
       body {
         font-family: "Open Sans", sans-serif;
         background-color: #f5f5f5;
+        margin:0;'
       }
+      
+          a {
+      text-decoration: none;
+    }
+
+    li {
+      list-style: none;
+    }
+
+    /* NAVBAR STYLING STARTS */
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px;
+      background-color: teal;
+      color: #fff;
+    }
+
+    .nav-links a {
+      color: #fff;
+    }
+
+    /* LOGO */
+    .logo {
+      font-size: 32px;
+    }
+
+    /* NAVBAR MENU */
+    .nav-links {
+      display: flex;
+      gap: 1em;
+      font-size: 18px;
+    }
+
+    .nav-links li:hover {
+      background-color: #4c9e9e;
+      border-radius: 5px;
+      transition: 0.3s ease;
+    }
+
+    .nav-links li {
+      padding: 5px 14px;
+    }
 
       h1 {
         text-align: center;
@@ -131,6 +176,18 @@
     </style>
   </head>
   <body>
+  <nav class="navbar">
+ 
+    <div class="logo">FINANCE</div>
+  
+    <ul class="nav-links">
+       <li><a href="#home">Home</a></li>
+	      <li><a href="/Final/proposedBudget">Reports</a></li>
+	      <li><a href="/Final/registerStudents">Register Student</a></li>
+	      <li><a href="/Final/registerStaff">Register Staff</a></li>
+	      <li><a href="/Final/studentsDetails">Student Details</a></li>
+    </ul>
+  </nav>
     <h1>Student Information</h1>
     <table id="student-table">
       <thead>

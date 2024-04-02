@@ -126,11 +126,11 @@
   
     <ul class="nav-links">
        <li><a href="#home">Home</a></li>
-	      <li><a href="/Final/budget">Reports</a></li>
-	      <li><a href="/Final/registerStudent">Register Student</a></li>
+	      <li><a href="/Final/proposedBudget">Reports</a></li>
+	     
 	      <li><a href="/Final/registerStaff">Register Staff</a></li>
 	      <li><a href="/Final/staffDetails">Staff Details</a></li>
-	      <li><a href="/Final/studentDetails">Student Details</a></li>
+	      <li><a href="/Final/studentsDetails">Student Details</a></li>
     </ul>
   </nav>
 <div class="container">

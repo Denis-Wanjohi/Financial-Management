@@ -125,9 +125,11 @@
     <div class="logo">FINANCE</div>
   
     <ul class="nav-links">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="/Final/StaffHome">Home</a></li>
+      <li><a href="/Final/feeCollection" >Fee Collection</a></li>
+      <li><a href="/Final/expenseManagement">Expense Management</a></li>
+      <li><a href="/Final/payrollProcessing">PayrollProcessing</a></li>
+      <li><a href="/Final/studentDetails">Student Details</a></li>
     </ul>
   </nav>
 <div class="container">
